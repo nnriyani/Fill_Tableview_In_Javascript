@@ -1,0 +1,35 @@
+<dashboard script="tableview.js">
+  <label>Dynamic Table View</label>
+  <fieldset submitButton="true">
+    <input type="time" token="timerange">
+      <label>Time Range</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="dropdown" token="src_type" searchWhenChanged="false">
+      <label>source type</label>
+      <default>Tutorial</default>
+      <initialValue>Tutorial</initialValue>
+      <fieldForLabel>sourcetype</fieldForLabel>
+      <fieldForValue>sourcetype</fieldForValue>
+      <search>
+        <query>index="main" |dedup sourcetype | table sourcetype</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+    </input>
+  </fieldset>
+  <description>Load Table view from javascript</description>
+   <row>
+    <panel>
+      <html>
+         <div id="mytableview">
+        
+         </div>
+           
+      </html>
+    </panel>
+  </row>
+</dashboard>

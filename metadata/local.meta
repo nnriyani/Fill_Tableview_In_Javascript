@@ -1,0 +1,12 @@
+[app/ui]
+version = 7.1.1
+modtime = 1542690725.060081400
+
+[app/launcher]
+version = 7.1.1
+modtime = 1542690725.081183100
+
+[views/dynamic_table_view]
+owner = admin
+version = 7.1.1
+modtime = 1542691071.605329000
